@@ -33,6 +33,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
 }
+html, body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 button { border: none; cursor: pointer; font-family: inherit; }
@@ -1735,8 +1736,10 @@ footer {
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .cat-grid { grid-template-columns: repeat(3, 1fr); }
   .about-values{display: flex; flex-direction: column; }
-  .left-info{width: 350px;}
-  .right-form{width: 350px;}
+  .left-info{width: 350px;margin-left: -15px;}
+  .right-form{width: 350px;margin-left: -15px;}
+  .cat-card{padding: 0.5rem 1rem;}
+  .gallery-item-overlay p {display: none;}
 }
 
 /* ============ EXTRA POLISH ============ */
