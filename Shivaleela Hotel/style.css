@@ -179,10 +179,11 @@ ul { list-style: none; }
 }
 .hamburger span {
   display: block; width: 24px; height: 2px;
-  background: white;
+  background: rgb(0, 0, 0);
   border-radius: 2px;
   transition: var(--transition);
 }
+
 #navbar.scrolled .hamburger span { background: var(--text-dark); }
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
