@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivaleela Hotel – Authentic Indian Cuisine</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-mandala"></div>
+  <div class="loader-logo"> Shivaleela Hotel</div>
+  <div class="loader-tagline">Authentic Indian Cuisine</div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-text">Shivaleela Hotel</div>
+  </div>
+  <div class="nav-links">
+    <div class="nav-link active" onclick="showPage('home')">Home</div>
+    <div class="nav-link" onclick="showPage('about')">About</div>
+    <div class="nav-link" onclick="showPage('menu')">Menu</div>
+    <div class="nav-link" onclick="showPage('gallery')">Gallery</div>
+    <div class="nav-link" onclick="showPage('contact')">Contact</div>
+    <div class="nav-link nav-btn" onclick="showPage('contact')"><i class="fas fa-calendar-check"></i> Reserve</div>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-link" onclick="showPage('home'); toggleMenu()">🏠 Home</div>
+  <div class="mobile-menu-link" onclick="showPage('about'); toggleMenu()">📖 About Us</div>
+  <div class="mobile-menu-link" onclick="showPage('menu'); toggleMenu()">🍽️ Our Menu</div>
+  <div class="mobile-menu-link" onclick="showPage('gallery'); toggleMenu()">📸 Gallery</div>
+  <div class="mobile-menu-link" onclick="showPage('contact'); toggleMenu()">📞 Contact</div>
+</div>
+<div class="mobile-overlay" id="mobile-overlay" onclick="toggleMenu()"></div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+  <div class="float-btn fb-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></div>
+  <a href="tel:+911234567890" class="float-btn fb-phone"><i class="fas fa-phone"></i></a>
+  <a href="https://wa.me/911234567890" class="float-btn fb-whatsapp"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <div class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></div>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+</div>
+
+<!-- ==================== PAGE: HOME ==================== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-img"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        <span>Est. 1945 </span>
+      </div>
+      <h1 class="hero-title">
+        Experience Authentic
+        <span class="highlight">Indian Flavors</span>
+      </h1>
+      <p class="hero-subtitle">
+        A culinary journey through the rich tapestry of India's diverse cuisine — crafted with centuries-old recipes, premium spices, and the love of our master chefs.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="showPage('menu')">
+          <span><i class="fas fa-utensils"></i> Explore Menu</span>
+        </button>
+        <button class="btn-outline" onclick="showPage('contact')">
+          <i class="fas fa-calendar-alt"></i> Book a Table
+        </button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">100+</span><span class="hero-stat-label">Dishes</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">80+</span><span class="hero-stat-label">Years</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">20LAKH+</span><span class="hero-stat-label">Happy Guests</span></div>
+     </div>
+   
+  </section>
+
+  <!-- FEATURED DISHES -->
+  <section class="featured-section">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-fire-alt"></i> Chef's Favourites</div>
+        <h2 class="section-title reveal">Most <span>Loved</span> Dishes</h2>
+        <div class="ornament"></div>
+        <p class="section-subtitle reveal" style="margin:0 auto;">Handpicked by our master chefs — dishes that tell the story of India's rich culinary heritage.</p>
+      </div>
+      <div class="featured-grid">
+        <div class="dish-card reveal">
+          <div class="dish-card-img">
+            <img src="./images/french-fries.webp" alt="French Fries" loading="lazy">
+            <div class="dish-card-badge">Kids Special</div>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">French Fries</div>
+            <div class="dish-card-desc">Crispy golden fries seasoned with chaat masala</div>
+            <div class="dish-card-footer">
+              <div>
+               <div class="dish-rating"><i class="fas fa-star"></i> 4.9 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dish-card reveal" style="transition-delay:0.1s">
+          <div class="dish-card-img">
+            <img src="./images/GulabJamun.webp" alt="Gulab Jamun" loading="lazy">
+            <div class="dish-card-badge">Chef's Pick</div>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Gulab Jamun</div>
+            <div class="dish-card-desc">Soft milk-solid dumplings in fragrant rose-cardamom syrup</div>
+            <div class="dish-card-footer">
+              <div>
+                <div class="dish-rating"><i class="fas fa-star"></i> 4.8</div>
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="dish-card reveal" style="transition-delay:0.2s">
+          <div class="dish-card-img">
+            <img src="./images/paneer-tikka.jpg" alt="Paneer Tikka" loading="lazy">
+            <div class="dish-card-badge">Veg Special</div>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Paneer Tikka</div>
+            <div class="dish-card-desc">Char-grilled paneer chunks marinated in spiced yogurt, served with mint chutney</div>
+            <div class="dish-card-footer">
+              <div>
+               <div class="dish-rating"><i class="fas fa-star"></i> 4.7 </div>
+              </div>
+             </div>
+          </div>
+        </div>
+        <div class="dish-card reveal" style="transition-delay:0.3s">
+          <div class="dish-card-img">
+            <img src="./images/Masala-dosa.webp" alt="Dosa" loading="lazy">
+            <div class="dish-card-badge">South Special</div>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Masala Dosa</div>
+            <div class="dish-card-desc">Crispy fermented rice crepe filled with spiced potato masala, served with chutneys</div>
+            <div class="dish-card-footer">
+              <div>
+                <div class="dish-rating"><i class="fas fa-star"></i> 4.8</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <button class="btn-primary" onclick="showPage('menu')">
+          <span><i class="fas fa-th-large"></i> View Full Menu</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories-section">
+    <div style="max-width:1280px;margin:0 auto;position:relative;z-index:1;">
+      <div class="section-header" style="margin-bottom:3rem;">
+        <div class="section-badge reveal" style="border-color:rgba(255,255,255,0.2);color:var(--gold-light);background:rgba(255,255,255,0.05);">
+          <i class="fas fa-th"></i> Cuisines
+        </div>
+        <h2 class="section-title reveal" style="color:white;">Explore <span>Cuisines</span></h2>
+        <div class="ornament"></div>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card reveal" onclick="showMenuCategory('north-indian')">
+          <span class="cat-icon">🍛</span>
+          <div class="cat-name">North Indian</div>
+         </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('south-indian')">
+          <span class="cat-icon">🥞</span>
+          <div class="cat-name">South Indian</div>
+         </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('tandoori')">
+          <span class="cat-icon">🍢</span>
+          <div class="cat-name">Tandoori</div>
+         </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('street-food')">
+          <span class="cat-icon">🥙</span>
+          <div class="cat-name">Street Food</div>
+         </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('biryani')">
+          <span class="cat-icon">🍚</span>
+          <div class="cat-name">Biryani</div>
+          </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('desserts')">
+          <span class="cat-icon">🍮</span>
+          <div class="cat-name">Desserts</div>
+          </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('beverages')">
+          <span class="cat-icon">🥤</span>
+          <div class="cat-name">Beverages</div>
+          </div>
+        <div class="cat-card reveal" onclick="showMenuCategory('soup')">
+          <span class="cat-icon">🍽️</span>
+          <div class="cat-name">Soup</div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF SPECIAL -->
+  <section class="chef-section">
+    <div class="chef-inner" style="max-width:1280px;margin:0 auto;">
+      <div class="chef-img-wrap reveal-left">
+        <img class="chef-img-main" src="./images/about.webp" alt="Chef">
+        <div class="chef-decoration"></div>
+        <!-- <div class="chef-img-badge">
+          <div class="chef-badge-name">Chef Rajesh Kumar</div>
+          <div class="chef-badge-role">⭐ Executive Head Chef · 20+ Years</div>
+        </div> -->
+      </div>
+      <div class="chef-text reveal-right">
+        <!-- <div class="section-badge"><i class="fas fa-award"></i> Meet Our Chef</div> -->
+        <h2 class="section-title">Crafted With <span>Passion</span> & Tradition</h2>
+        <div class="ornament-left ornament"></div>
+        <p class="chef-signature">
+          "Every dish I create is a tribute to my grandmother's kitchen — where the fragrance of cumin, cardamom, and saffron filled the air and stories were shared around the fire."
+        </p>
+        <p style="color:var(--text-medium);font-size:0.95rem;line-height:1.85;margin-bottom:1.5rem;">
+       Our talented chef brings years of culinary passion and hands-on experience to every dish, combining authentic flavors with creative presentation. Dedicated to quality, freshness, and exceptional taste, the chef carefully crafts each meal </p>
+        <div style="display:flex;gap:2rem;margin-bottom:2rem;">
+         
+         
+        </div>
+        <div class="chef-dish-preview">
+          <div class="chef-dish-mini">
+            <img src="./images/samosa.jpg" alt="Samosa">
+            <div class="chef-dish-mini-name">Samosa</div>
+          </div>
+          <div class="chef-dish-mini">
+            <img src="./images/GulabJamun.webp" alt="Gulab Jamun">
+            <div class="chef-dish-mini-name">Gulab Jamun</div>
+          </div>
+          <div class="chef-dish-mini">
+            <img src="./images/tandoori.avif" alt="Tandoori">
+            <div class="chef-dish-mini-name">Tandoori</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-heart"></i> Testimonials</div>
+        <h2 class="section-title reveal">What Our <span>Guests</span> Say</h2>
+        <div class="ornament"></div>
+      </div>
+      <div class="testimonials-slider reveal">
+        <div class="testimonials-track">
+          <div class="testimonials-slides" id="testimonials-slides">
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"“Amazing quality food with rich authentic taste. Every dish felt carefully prepared with fresh ingredients. This place has quickly become our favorite spot for vegetarian dining.”</p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Priya Sharma</div>
+                  <div class="testimonial-author-loc"><i class="fas fa-map-marker-alt" style="color:var(--gold)"></i> Mumbai, India</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">“The restaurant has a modern yet traditional vibe that feels very relaxing. We loved the Paneer Butter Masala and the desserts were equally fantastic. Definitely visiting again!”</p>
+              <div class="testimonial-author">
+                <div>
+                  <div class="testimonial-author-name">Khushboo</div>
+                  <div class="testimonial-author-loc"><i class="fas fa-map-marker-alt" style="color:var(--gold)"></i>Mumbai, India</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">“The Paneer Tikka and Dal Makhani were absolutely delicious! Every dish was full of authentic flavors and beautifully presented. The peaceful ambience makes this restaurant perfect for family dinners.</p>
+              <div class="testimonial-author">
+                 <div>
+                  <div class="testimonial-author-name">Ananya Patel</div>
+                  <div class="testimonial-author-loc"><i class="fas fa-map-marker-alt" style="color:var(--gold)"></i> Delhi, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots">
+          <div class="slider-dot active" onclick="goToSlide(0)"></div>
+          <div class="slider-dot" onclick="goToSlide(1)"></div>
+          <div class="slider-dot" onclick="goToSlide(2)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- GALLERY PREVIEW -->
+  <section class="gallery-preview-section">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-images"></i> Gallery</div>
+        <h2 class="section-title reveal">A Feast for <span>Your Eyes</span></h2>
+        <div class="ornament"></div>
+      </div>
+      <div class="gallery-grid-preview reveal">
+        <div class="gallery-item" onclick="openLightbox('./images/about.webp')">
+          <img src="./images/about.webp" alt="Restaurant" loading="lazy">
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('./images/biryani.avif')">
+          <img src="./images/biryani.avif" alt="Biryani" loading="lazy">
+          <div class="gallery-item-overlay"><p>Biryani</p></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('./images/kesar-lassi.jpg')">
+          <img src="./images/kesar-lassi.jpg" alt="Kesar Lassi" loading="lazy">
+          <div class="gallery-item-overlay"><p>Kesar Lassi</p></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('./images/noodeles.avif')">
+          <img src="./images/noodeles.avif" alt="Noodles" loading="lazy">
+          <div class="gallery-item-overlay"><p>Noodles</p></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('./images/idli.jpg')">
+          <img src="./images/idli.jpg" alt="idli" loading="lazy">
+          <div class="gallery-item-overlay"><p>idli</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/pav-bhaji.avif')">
+          <img src="./images/pav-bhaji.avif" alt="Pav Bhaji" loading="lazy">
+          <div class="gallery-item-overlay"><p>Pav Bhaji</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/sandwich.jpg')">
+          <img src="./images/sandwich.jpg" alt="Sandwich" loading="lazy">
+          <div class="gallery-item-overlay"><p>Sandwich</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/tandoori.avif')">
+          <img src="./images/tandoori.avif" alt="Tandoori" loading="lazy">
+          <div class="gallery-item-overlay"><p>Tandoori</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/palak-paneer.webp')">
+          <img src="./images/palak-paneer.webp" alt="Palak Paneer" loading="lazy">
+          <div class="gallery-item-overlay"><p>Palak Paneer</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/hot-baverages.jpg')">
+          <img src="./images/hot-baverages.jpg" alt="Hot Beverages" loading="lazy">
+          <div class="gallery-item-overlay"><p>Hot Beverages</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/dal-makhni.webp')">
+          <img src="./images/dal-makhni.webp" alt="Dal Makhni" loading="lazy">
+          <div class="gallery-item-overlay"><p>Dal Makhni</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/cone.jpg')">
+          <img src="./images/cone.jpg" alt="Cone" loading="lazy">
+          <div class="gallery-item-overlay"><p>Cone</p></div>
+        </div>
+         <div class="gallery-item" onclick="openLightbox('./images/refreshment-drinks.webp')">
+          <img src="./images/refreshment-drinks.webp" alt="Refreshment Drinks" loading="lazy">
+          <div class="gallery-item-overlay"><p style="margin-left: 1em;">Refreshment Drinks</p></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+        <button class="btn-primary" onclick="showPage('gallery')">
+          <span><i class="fas fa-th"></i> View Full Gallery</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION BANNER -->
+  <section class="reservation-banner">
+    <div class="reservation-inner">
+      <div class="section-badge reveal" style="border-color:rgba(255,255,255,0.2);color:var(--gold-light);background:rgba(255,255,255,0.05);">
+        <i class="fas fa-calendar-alt"></i> Reservations
+      </div>
+      <h2 class="reservation-title reveal">Reserve Your <span style="color:var(--gold-light)">Table Tonight</span></h2>
+      <p class="reservation-sub reveal">Join us for an unforgettable dining experience. Availability is limited — secure your spot now.</p>
+      <form class="reservation-form reveal" onsubmit="submitReservation(event)">
+        <input type="text" class="res-input" placeholder="Your Name" required>
+        <input type="tel" class="res-input" placeholder="Phone Number" required>
+        <input type="date" class="res-input" required>
+        <input type="time" class="res-input" required>
+        <select class="res-input" required style="cursor:pointer;">
+          <option value="">Guests</option>
+          <option>1-2</option>
+          <option>3-4</option>
+          <option>5-6</option>
+          <option>7+</option>
+        </select>
+        <button type="submit" class="btn-primary" style="white-space:nowrap;">
+          <span><i class="fas fa-calendar-check"></i> Book Table</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-brand-name">Shivaleela Hotel</div>
+        </div>
+        <p class="footer-desc">A culinary journey through the heart of India. Where tradition meets modern elegance and every meal becomes a cherished memory.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('about')">About Us</a>
+          <a onclick="showPage('menu')">Our Menu</a>
+          <a onclick="showPage('gallery')">Gallery</a>
+          <a onclick="showPage('contact')">Contact</a>
+         
+        </div>
+      </div>
+      <div>
+         <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>15, near Railway Station, Hardevi Society, Natwar Nagar, Jogeshwari East, Mumbai, Maharashtra 400060</span></div>
+       
+        <div class="footer-col-title">Opening Hours</div>
+        <div class="footer-hours">
+          <div class="footer-hour"><span>Monday – Sunday</span><span>9am – 12pm</span></div>
+          <div class="footer-hour"><span>Holidays</span><span>By Booking</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>15, near Railway Station, Hardevi Society, Natwar Nagar, Jogeshwari East, Mumbai, Maharashtra 400060</span></div>
+       <a href="tel:+918104699941"> <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 81046-99941</span></div></a>
+       <a href="mailto:sanathshetty1965@gmail.com"> <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>sanathshetty1965@gmail.com</span></div></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Shivaleela Hotel. All rights reserved. Crafted with ❤️ in India.</span>
+      <div class="footer-bottom-links">
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Sitemap</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: ABOUT ==================== -->
+<div class="page" id="page-about">
+  <section class="about-hero">
+    <div class="about-hero-bg"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">Our Story</div>
+      <h1 class="page-hero-title">About Shivaleela Hotel</h1>
+      <p class="page-hero-sub">80 years of passion, tradition, and authentic Indian cuisine crafted with love.</p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="about-story">
+    <div class="about-story-inner">
+      <div class="about-img-grid reveal-left">
+        <div class="about-img-main">
+          <img src="./images/hotel.png" alt="Restaurant Image" loading="lazy">
+        </div>
+        <div class="about-img-sm">
+          <img src="./images/about.webp" alt="Restaurant image" loading="lazy">
+        </div>
+        <div class="about-img-sm">
+          <img src="./images/about1.webp" alt="hotel image" loading="lazy">
+        </div>
+      </div>
+      <div class="about-story-text reveal-right">
+        <div class="section-badge"><i class="fas fa-book-open"></i> Our Heritage</div>
+        <h2 class="section-title">A Legacy of <span>Taste</span> & Tradition</h2>
+        <div class="ornament-left ornament"></div>
+        <p>Shivaleela Hotel, established in 1945 inJogeshwari East, Mumbai, is a well-known North Indian restaurant ownedby Ramdas Patkar. The in-charge isSanath Shetty (8104699941).</p>
+        <p>The restaurant is recognized for itscommitment to customer satisfactionand quality service, drawing a largecustomer base. Conveniently locatednear Jogeshwari Railway Station, itoffers a variety of North Indian,Chinese, and Tandoori dishes at bothaffordable and moderate prices.</p>       
+        <p>along with home delivery services. Thebusiness plans to expand its offeringsin the future.Every recipe in our kitchen traces its roots to ancient Indian culinary traditions — passed down through generations, refined by our master chefs, and brought to your table with love.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-leaf"></i></div>
+            <div><div class="value-label">Farm Fresh</div><div class="value-desc">Locally sourced ingredients daily</div></div>
+          </div>
+      <div class="value-item">
+  <div class="value-icon">
+    <i class="fas fa-award"></i>
+  </div>
+
+  <div>
+    <div class="value-label">Premium Dining</div>
+    <div class="value-desc">
+      Elegant ambience with exceptional customer service
+    </div>
+  </div>
+</div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fas fa-heart"></i></div>
+            <div><div class="value-label">Cooked with Love</div><div class="value-desc">Every dish tells a story</div></div>
+          </div>
+        <div class="value-item">
+  <div class="value-icon">
+    <i class="fas fa-utensils"></i>
+  </div>
+
+  <div>
+    <div class="value-label">Authentic Pure Veg</div>
+    <div class="value-desc">
+      Traditional Indian flavors crafted with fresh ingredients
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <!-- <section class="team-section">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-users"></i> Our Team</div>
+        <h2 class="section-title reveal">The Culinary <span>Masters</span></h2>
+        <div class="ornament"></div>
+        <p class="section-subtitle reveal" style="margin:0 auto;">Meet the talented chefs who craft every dish with passion, skill, and decades of expertise.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&q=80" alt="Chef Rajesh" loading="lazy">
+          </div>
+          <div class="team-info">
+            <div class="team-name">Chef Rajesh Kumar</div>
+            <div class="team-role">Executive Head Chef</div>
+            <p class="team-bio">20+ years of culinary mastery in traditional Indian and Mughlai cuisines. Trained in Paris and Mumbai.</p>
+          </div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.1s">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=500&q=80" alt="Chef Priya" loading="lazy">
+          </div>
+          <div class="team-info">
+            <div class="team-name">Chef Priya Nair</div>
+            <div class="team-role">South Indian Specialist</div>
+            <p class="team-bio">Maestro of South Indian flavours — from crispy dosas to aromatic Chettinad curries.</p>
+          </div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.2s">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80" alt="Chef Arjun" loading="lazy">
+          </div>
+          <div class="team-info">
+            <div class="team-name">Chef Arjun Singh</div>
+            <div class="team-role">Tandoor & Grill Expert</div>
+            <p class="team-bio">Over 15 years perfecting the art of the tandoor — creating perfectly charred and succulent dishes.</p>
+          </div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.3s">
+          <div class="team-img">
+            <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=500&q=80" alt="Chef Meera" loading="lazy">
+          </div>
+          <div class="team-info">
+            <div class="team-name">Chef Meera Iyer</div>
+            <div class="team-role">Desserts & Pastry Chef</div>
+            <p class="team-bio">Transforming classic Indian sweets into modern masterpieces — from Gulab Jamun to fusion desserts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- TIMELINE -->
+  <!-- <section class="timeline-section">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-history"></i> Our Journey</div>
+        <h2 class="section-title reveal">25 Years of <span>Excellence</span></h2>
+        <div class="ornament"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-dot" style="top:1.5rem;"></div>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <span class="timeline-year">1998</span>
+            <div class="timeline-title">The Beginning</div>
+            <div class="timeline-desc">Spice Garden opens its doors on Maharaja Road with just 20 seats and 5 signature dishes.</div>
+          </div>
+          <div class="timeline-space"></div>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:0.1s">
+          <div class="timeline-space"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2003</span>
+            <div class="timeline-title">First Major Expansion</div>
+            <div class="timeline-desc">Expanded to 100 seats and introduced a full menu including regional specialties from across India.</div>
+          </div>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:0.15s">
+          <div class="timeline-content">
+            <span class="timeline-year">2008</span>
+            <div class="timeline-title">First National Award</div>
+            <div class="timeline-desc">Won "Best Indian Restaurant of the Year" at the National Food Excellence Awards.</div>
+          </div>
+          <div class="timeline-space"></div>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:0.2s">
+          <div class="timeline-space"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2015</span>
+            <div class="timeline-title">International Recognition</div>
+            <div class="timeline-desc">Featured in Forbes India's Top 10 Restaurants and expanded catering services internationally.</div>
+          </div>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:0.25s">
+          <div class="timeline-content">
+            <span class="timeline-year">2020</span>
+            <div class="timeline-title">Digital Evolution</div>
+            <div class="timeline-desc">Launched online ordering, cloud kitchen, and virtual cooking masterclasses during the pandemic.</div>
+          </div>
+          <div class="timeline-space"></div>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:0.3s">
+          <div class="timeline-space"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <div class="timeline-title">25 Years of Legacy</div>
+            <div class="timeline-desc">Celebrating 25 magnificent years with a complete restaurant redesign and expanded menu of 500+ dishes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="faq-section">
+
+  <div class="section-title">
+    <span>FAQ</span>
+    <h2>Frequently Asked Questions</h2>
+    <p>
+      Discover everything about Shivaleela Pure Veg Restaurant, our heritage,
+      authentic cuisine, and dining experience.
+    </p>
+  </div>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What is the Official Contact Number of Shivaleela Hotel.
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="faq-answer">
+        <p>
+         The Contact no of Shivaleela Hotel is 8104699941. You can call this number for reservations, inquiries, or any assistance related to our restaurant.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+         What is the Official E-MAIL ID of Shivaleela Hotel.
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="faq-answer">
+        <p>
+         The Official ID of Shivaleela Hotel is sanathshetty1965@gmail.com.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Who is the Owner of Shivaleela Hotel?
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Mr. Sanath Shetty is the owner of Shivaleela Hotel.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Shivaleela Hotel is a Pure Veg Restaurant?
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="faq-answer">
+        <p>
+        Yes, Shivaleela Hotel is a Pure Veg Restaurant, offering a wide variety of delicious vegetarian dishes that cater to all tastes and preferences. Our menu is crafted with fresh ingredients and authentic flavors to provide a memorable dining experience for our guests.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+       What type of Cuisine does Shivaleela Hotel Serve?
+        <i class="fas fa-plus"></i>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Shivaleela Hotel serves a diverse range of cuisines, including North Indian, South Indian, Chinese, and Tandoori dishes. Our menu is designed to offer authentic flavors and a variety of options.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER (About) -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-brand-name">Shivaleela Hotel</div>
+        </div>
+        <p class="footer-desc">A culinary journey through the heart of India. Where tradition meets modern elegance and every meal becomes a cherished memory.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('menu')">Menu</a>
+          <a onclick="showPage('gallery')">Gallery</a>
+          <a onclick="showPage('contact')">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-hours">
+          <div class="footer-hour"><span>Mon–Sun</span><span>9am–12am</span></div>
+         </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>15, near Railway Station, Hardevi Society, Natwar Nagar, Jogeshwari East, Mumbai, Maharashtra 400060</span></div>
+        <a href="tel:+918104699941"> <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 81046-99941</span></div></a>
+         <a href="mailto:sanathshetty1965@gmail.com"> <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>sanathshetty1965@gmail.com</span></div></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Shivaleela Hotel. All rights reserved.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- faq -->
+<script>
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  const question = item.querySelector(".faq-question");
+
+  question.addEventListener("click", () => {
+
+    faqItems.forEach(faq => {
+      if(faq !== item){
+        faq.classList.remove("active");
+      }
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>
+
+<!-- ==================== PAGE: MENU ==================== -->
+<div class="page" id="page-menu">
+  <section class="about-hero menu-hero">
+    <div class="about-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200&q=80');opacity:0.3;"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,10,0,0.8),rgba(61,26,0,0.5));"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">Authentic Recipes</div>
+      <h1 class="page-hero-title">Our Menu</h1>
+      <p class="page-hero-sub">100+ dishes crafted with love, tradition, and the finest spices from across India</p>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <!-- CATEGORY TABS -->
+    <div class="menu-nav">
+      <div class="menu-tab active" onclick="switchMenuTab('all', this)">
+  🌟 All
+</div>
+      <div class="menu-tab active" onclick="switchMenuTab('north-indian', this)">🍛 North Indian</div>
+      <div class="menu-tab" onclick="switchMenuTab('south-indian', this)">🥞 South Indian</div>
+      <div class="menu-tab" onclick="switchMenuTab('punjabi', this)">🫓 Punjabi</div>
+      <div class="menu-tab" onclick="switchMenuTab('street-food', this)">🥙 Street Food</div>
+      <div class="menu-tab" onclick="switchMenuTab('chinese', this)">🍜 Chinese</div>
+      <div class="menu-tab" onclick="switchMenuTab('tandoori', this)">🔥 Tandoori</div>
+      <div class="menu-tab" onclick="switchMenuTab('fast-food', this)">🍔 Fast Food</div>
+      <div class="menu-tab" onclick="switchMenuTab('desserts', this)">🍮 Desserts</div>
+      <div class="menu-tab" onclick="switchMenuTab('beverages', this)">🥤 Beverages</div>
+      <div class="menu-tab" onclick="switchMenuTab('soup', this)">🍽️ Soup</div>
+      <div class="menu-tab" onclick="switchMenuTab('breakfast', this)">🌅 Breakfast</div>
+      <div class="menu-tab" onclick="switchMenuTab('vegetarian', this)">🥦 Vegetarian</div>
+    </div>
+
+    <!-- NORTH INDIAN -->
+    <div class="menu-items active" id="menu-north-indian">
+      <div class="menu-category-title">North Indian Cuisine</div>
+      <div class="menu-category-desc">Rich gravies, aromatic spices, and robust flavors from the heartland of India — Punjab, Uttar Pradesh, Rajasthan & beyond.</div>
+      <div class="menu-cards-grid" id="north-indian-grid"></div>
+    </div>
+    <!-- SOUTH INDIAN -->
+    <div class="menu-items active" id="menu-south-indian">
+      <div class="menu-category-title">South Indian Cuisine</div>
+      <div class="menu-category-desc">Light, healthy, and bursting with flavor — the culinary art of Tamil Nadu, Kerala, Karnataka & Andhra Pradesh.</div>
+      <div class="menu-cards-grid" id="south-indian-grid"></div>
+    </div>
+    <!-- PUNJABI -->
+    <div class="menu-items active" id="menu-punjabi">
+      <div class="menu-category-title">Punjabi Specialties</div>
+      <div class="menu-category-desc">Bold, buttery, and heartwarming — the vibrant flavors of Punjab's culinary tradition.</div>
+      <div class="menu-cards-grid" id="punjabi-grid"></div>
+    </div>
+    <!-- STREET FOOD -->
+    <div class="menu-items active" id="menu-street-food">
+      <div class="menu-category-title">Indian Street Food</div>
+      <div class="menu-category-desc">The soul of India on a plate — iconic street bites that burst with bold, tangy, and spicy flavors.</div>
+      <div class="menu-cards-grid" id="street-food-grid"></div>
+    </div>
+    <!-- CHINESE -->
+    <div class="menu-items active" id="menu-chinese">
+      <div class="menu-category-title">Indo-Chinese Fusion</div>
+      <div class="menu-category-desc">The iconic fusion of Indian spices with Chinese cooking techniques — a beloved Indian culinary invention.</div>
+      <div class="menu-cards-grid" id="chinese-grid"></div>
+    </div>
+    <!-- TANDOORI -->
+    <div class="menu-items active" id="menu-tandoori">
+      <div class="menu-category-title">Tandoori Specialties</div>
+      <div class="menu-category-desc">Marinated, skewered, and cooked in our authentic clay tandoor at 900°C — smoky, charred perfection.</div>
+      <div class="menu-cards-grid" id="tandoori-grid"></div>
+    </div>
+    <!-- FAST FOOD -->
+    <div class="menu-items active" id="menu-fast-food">
+      <div class="menu-category-title">Fast Food</div>
+      <div class="menu-category-desc">Quick bites and crowd-pleasing favorites — perfect for a casual meal with family and friends.</div>
+      <div class="menu-cards-grid" id="fast-food-grid"></div>
+    </div>
+    <!-- DESSERTS -->
+    <div class="menu-items" id="menu-desserts">
+      <div class="menu-category-title">Indian Desserts</div>
+      <div class="menu-category-desc">End your meal on a sweet note — traditional Indian mithai and modern dessert creations.</div>
+      <div class="menu-cards-grid" id="desserts-grid"></div>
+    </div>
+    <!-- BEVERAGES -->
+    <div class="menu-items active" id="menu-beverages">
+      <div class="menu-category-title">Beverages</div>
+      <div class="menu-category-desc">From refreshing lassi to soothing masala chai — the perfect drink for every occasion.</div>
+      <div class="menu-cards-grid" id="beverages-grid"></div>
+    </div>
+    <!-- SOUP -->
+    <div class="menu-items active" id="menu-soup">
+      <div class="menu-category-title">Soups</div>
+      <div class="menu-category-desc">Freshly prepared Indian soups that blend comfort, tradition, and rich homemade flavors in every sip.</div>
+      <div class="menu-cards-grid" id="soup-grid"></div>
+    </div>
+    <!-- BREAKFAST -->
+    <div class="menu-items active" id="menu-breakfast">
+      <div class="menu-category-title">Breakfast</div>
+      <div class="menu-category-desc">Start your day the Indian way — wholesome, delicious, and energy-packed morning meals.</div>
+      <div class="menu-cards-grid" id="breakfast-grid"></div>
+    </div>
+    <!-- VEGETARIAN -->
+    <div class="menu-items active" id="menu-vegetarian">
+      <div class="menu-category-title">Pure Vegetarian</div>
+      <div class="menu-category-desc">A celebration of India's rich vegetarian tradition — fresh, wholesome, and explosively flavorful.</div>
+      <div class="menu-cards-grid" id="vegetarian-grid"></div>
+    </div>
+    
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-brand-name">Shivaleela Hotel</div>
+        </div>
+        <p class="footer-desc">A culinary journey through the heart of India. Where tradition meets modern elegance and every meal becomes a cherished memory.</p>
+       <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('about')">About</a>
+          <a onclick="showPage('contact')">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-hours">
+          <div class="footer-hour"><span>Mon–Sun</span><span>9am–12am</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+918104699941"> <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 81046-99941</span></div></a>
+        <a href="mailto:sanathshetty1965@gmail.com"> <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>sanathshetty1965@gmail.com</span></div></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Shivaleela Hotel. All rights reserved.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: GALLERY ==================== -->
+<div class="page" id="page-gallery">
+  <section class="about-hero">
+    <div class="about-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80');opacity:0.3;"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,10,0,0.8),rgba(61,26,0,0.5));"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">Visual Journey</div>
+      <h1 class="page-hero-title">Our Gallery</h1>
+      <p class="page-hero-sub">A visual celebration of flavors, ambience, and the art of Indian cuisine</p>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div class="section-header" style="margin-bottom:2rem;">
+        <div class="section-badge reveal"><i class="fas fa-camera"></i> Photography</div>
+        <h2 class="section-title reveal">Feast Your <span>Eyes</span></h2>
+      </div>
+      <div class="gallery-filters reveal">
+        <div class="gallery-filter active" onclick="filterGallery('all', this)">🌟 All</div>
+        <div class="gallery-filter" onclick="filterGallery('food', this)">🍛 Food</div>
+        <div class="gallery-filter" onclick="filterGallery('interior', this)">🏛️ Interior</div>
+        <div class="gallery-filter" onclick="filterGallery('desserts', this)">🍮 Desserts</div>
+        <div class="gallery-filter" onclick="filterGallery('events', this)">🎉 Events</div>
+        <div class="gallery-filter" onclick="filterGallery('drinks', this)">🥤 Drinks</div>
+      </div>
+      <div class="gallery-masonry" id="gallery-masonry"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-brand-name">Shivaleela Hotel</div>
+        </div>
+        <p class="footer-desc">A culinary journey through the heart of India. Where tradition meets modern elegance and every meal becomes a cherished memory.</p>
+       <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+         </div>
+     
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('menu')">Menu</a>
+          <a onclick="showPage('contact')">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-hours">
+          <div class="footer-hour"><span>Mon–Sun</span><span>9am–12am</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+918104699941"> <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 81046-99941</span></div></a>
+         <a href="mailto:sanathshetty1965@gmail.com"> <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>sanathshetty1965@gmail.com</span></div></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Shivaleela Hotel. All rights reserved.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== PAGE: CONTACT ==================== -->
+<div class="page" id="page-contact">
+  <section class="about-hero">
+    <div class="about-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80');opacity:0.25;"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,10,0,0.82),rgba(61,26,0,0.55));"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">Get In Touch</div>
+      <h1 class="page-hero-title">Contact Us</h1>
+      <p class="page-hero-sub">We'd love to hear from you — reservations, events, or just to say hello!</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-inner">
+      <!-- LEFT: INFO -->
+      <div class="left-info"> >
+        <div class="section-badge reveal" style="margin-bottom:1.5rem;"><i class="fas fa-info-circle"></i> Contact Details</div>
+        <h2 class="section-title reveal" style="font-size:2rem;margin-bottom:1.5rem;">Visit <span>Shivaleela Hotel</span></h2>
+        <div class="contact-info-cards">
+          <div class="contact-info-card reveal">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-info-label">Our Location</div>
+              <div class="contact-info-value">15, near Railway Station, Hardevi Society, Natwar Nagar, Jogeshwari East, Mumbai, Maharashtra 400060</div>
+            </div>
+          </div>
+          <div class="contact-info-card reveal" style="transition-delay:0.1s">
+            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="contact-info-label">Phone Numbers</div>
+             <a href="tel:+918104699941"><div class="contact-info-value">+91 81046-99941</div></a> 
+            </div>
+          </div>
+          <div class="contact-info-card reveal" style="transition-delay:0.15s">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-info-label">Email Us</div>
+               <a href="mailto:sanathshetty1965@gmail.com"><div class="contact-info-value">sanathshetty1965@gmail.com</div></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hours-card reveal">
+          <div class="contact-hours-title"><i class="fas fa-clock"></i> Opening Hours</div>
+          <div class="hours-row"><span>Monday – Sunday</span><span>9:00 AM – 12:00 AM</span></div>
+         
+          <div class="hours-row"><span>Public Holidays</span><span>By Prior Booking</span></div>
+        </div>
+
+        <div class="reveal">
+          <div style="font-weight:700;font-size:0.9rem;color:var(--text-dark);margin-bottom:1rem;">Follow Us</div>
+          <div class="contact-social">
+            <div class="contact-social-btn cs-fb"><i class="fab fa-facebook-f"></i></div>
+            <div class="contact-social-btn cs-ig"><i class="fab fa-instagram"></i></div>
+            <div class="contact-social-btn cs-tw"><i class="fab fa-twitter"></i></div>
+            <div class="contact-social-btn cs-yt"><i class="fab fa-youtube"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="right-form">
+        <div class="contact-form-card reveal-right">
+          <div class="contact-form-title">Make a Reservation</div>
+          <p class="contact-form-sub">Book your table or send us a message — we'll get back within 2 hours.</p>
+          <form onsubmit="submitContactForm(event)">
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="Rahul" required>
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Sharma" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Phone *</label>
+                <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-input" placeholder="you@email.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Date *</label>
+                <input type="date" class="form-input" required>
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Time *</label>
+                <input type="time" class="form-input" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Guests</label>
+                <select class="form-input form-select">
+                  <option>1-2 Guests</option>
+                  <option>3-4 Guests</option>
+                  <option>5-6 Guests</option>
+                  <option>7-10 Guests</option>
+                  <option>10+ Guests (Private Event)</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label class="form-label">Occasion</label>
+                <select class="form-input form-select">
+                  <option>Regular Dining</option>
+                  <option>Birthday</option>
+                  <option>Anniversary</option>
+                  <option>Business Dinner</option>
+                  <option>Wedding</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Special Requests</label>
+              <textarea class="form-input form-textarea" placeholder="Any dietary requirements, seating preferences, or special arrangements..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+              <span><i class="fas fa-calendar-check"></i> Confirm Reservation</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- MAP -->
+        <div class="map-section reveal" style="margin-top:1.5rem;">
+          <div class="map-placeholder">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7538.756378144715!2d72.84464752003903!3d19.134915889139773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b62c8fdb28af%3A0xd3a1131ff4464a87!2sShivaleela!5e0!3m2!1sen!2sin!4v1779548216803!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-logo">
+          <div class="footer-logo-icon"><i class="fas fa-pepper-hot"></i></div>
+          <div class="footer-brand-name">Shivaleela Hotel</div>
+        </div>
+        <p class="footer-desc">A culinary journey through the heart of India. Where tradition meets modern elegance and every meal becomes a cherished memory.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('about')">About</a>
+          <a onclick="showPage('menu')">Menu</a>
+          <a onclick="showPage('gallery')">Gallery</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Hours</div>
+        <div class="footer-hours">
+          <div class="footer-hour"><span>Mon–Sun</span><span>9am–12am</span></div>
+          </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>15, near Railway Station, Hardevi Society, Natwar Nagar, Jogeshwari East, Mumbai, Maharashtra 400060</span></div>
+        <a href="tel:+918104699941"> <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+91 81046-99941</span></div></a>
+        <a href="mailto:sanathshetty1965@gmail.com"> <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>sanathshetty1965@gmail.com</span></div></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Shivaleela Hotel. All rights reserved.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+// ============ LOADING SCREEN ============
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loading-screen').classList.add('hidden');
+    initParticles();
+    initReveal();
+  }, 2200);
+});
+
+// ============ PAGE ROUTING ============
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l => {
+    if (l.textContent.trim().toLowerCase().includes(page) || 
+       (page === 'home' && l.textContent.trim() === 'Home')) {
+      l.classList.add('active');
+    }
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => {
+    initReveal();
+    if (page === 'home') animateCounters();
+    if (page === 'menu') initMenuData();
+    if (page === 'gallery') renderGallery();
+  }, 200);
+}
+
+function showMenuCategory(cat) {
+  showPage('menu');
+  setTimeout(() => {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-items').forEach(m => m.classList.remove('active'));
+    const tabs = document.querySelectorAll('.menu-tab');
+    tabs.forEach(t => {
+      if (t.textContent.toLowerCase().includes(cat.replace('-', ' ').split(' ')[0])) {
+        t.classList.add('active');
+      }
+    });
+    const el = document.getElementById('menu-' + cat);
+    if (el) el.classList.add('active');
+  }, 300);
+}
+
+// ============ NAVBAR ============
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 60) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+  const scrollTop = document.getElementById('scrollTopBtn');
+  if (window.scrollY > 400) {
+    scrollTop.classList.add('show');
+  } else {
+    scrollTop.classList.remove('show');
+  }
+});
+
+// ============ MOBILE MENU ============
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-overlay');
+  const hamburger = document.getElementById('hamburger');
+  menu.classList.toggle('open');
+  overlay.classList.toggle('show');
+  hamburger.classList.toggle('open');
+}
+
+// ============ HERO PARTICLES ============
+function initParticles() {
+  const container = document.getElementById('hero-particles');
+  if (!container) return;
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDelay = Math.random() * 8 + 's';
+    p.style.animationDuration = (4 + Math.random() * 6) + 's';
+    p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
+    p.style.opacity = Math.random() * 0.8 + 0.2;
+    container.appendChild(p);
+  }
+}
+
+// ============ SCROLL REVEAL ============
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// ============ COUNTERS ============
+function animateCounters() {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.floor(current).toLocaleString() + (target >= 1000 ? '+' : '');
+    }, 16);
+  });
+}
+
+// ============ TESTIMONIALS SLIDER ============
+let currentSlide = 0;
+function goToSlide(n) {
+  currentSlide = n;
+  document.getElementById('testimonials-slides').style.transform = `translateX(-${n * 100}%)`;
+  document.querySelectorAll('.slider-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === n);
+  });
+}
+setInterval(() => {
+  goToSlide((currentSlide + 1) % 3);
+}, 5000);
+
+// ============ LIGHTBOX ============
+function openLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// ============ MENU DATA ============
+const menuData = {
+  'north-indian': [
+   { name: 'Dal Makhani', desc: 'Slow-cooked black lentils in rich buttery gravy', rating: 4.8, reviews: 1600, img: './images/dal-makhni.webp', veg: true },
+    { name: 'Shahi Paneer', desc: 'Paneer cubes in rich cashew-cream gravy',  rating: 4.7, reviews: 1200, img: './images/shahi-paneer.png', veg: true },
+   { name: 'Aloo Gobi', desc: 'Potato and cauliflower in turmeric-spice masala', rating: 4.5, reviews: 890, img: './images/aloo-gobi.jpg', veg: true },
+  { name: 'Kadhi Pakoda', desc: 'Tangy yogurt gram flour curry with crispy fried fritters', rating: 4.6, reviews: 750, img: './images/kadhi-pakoda.jpg', veg: true },
+{ name: 'Rajma Rice', desc: 'Classic comfort meal of red kidney beans in thick gravy served with basmati rice', rating: 4.8, reviews: 1240, img: './images/rajma-rice.jpg', veg: true },],
+  'south-indian': [
+    { name: 'Masala Dosa', desc: 'Crispy rice crepe with spiced potato filling', price: 185, rating: 4.8, reviews: 3200, img: './images/masala-dosa.webp', veg: true },
+    { name: 'Idli Sambar', desc: 'Steamed rice cakes with vegetable lentil soup', price: 140, rating: 4.7, reviews: 2100, img: './images/idli.jpg', veg: true },
+    { name: 'Vada Sambar', desc: 'Crispy lentil donuts with sambar & coconut chutney', price: 120, rating: 4.6, reviews: 1800, img: './images/vada-sambar.jpg', veg: true },
+    { name: 'Uttapam', desc: 'Thick rice pancake topped with fresh vegetables', price: 160, rating: 4.5, reviews: 1200, img: './images/uttapam.jpg', veg: true },
+{ name: 'Upma', desc: 'Savory and fluffy semolina porridge cooked with ghee, veggies, and roasted nuts', price: 120, rating: 4.4, reviews: 850, img: './images/upma.jpg', veg: true },
+{ name: 'Medu Vada', desc: 'Crispy, deep-fried lentil fritters served with hot sambar and coconut chutney', price: 140, rating: 4.6, reviews: 1450, img: './images/medu-vada.jpg', veg: true }, ],
+  'punjabi': [
+    { name: 'Sarson Da Saag', desc: 'Mustard greens cooked with spices, served with makki roti', price: 260, rating: 4.9, reviews: 1400, img: './images/medu-vada.jpg', veg: true },
+    { name: 'Chole Bhature', desc: 'Spiced chickpea curry with fluffy fried bread', price: 220, rating: 4.8, reviews: 2800, img: './images/chole-bhature.jpg', veg: true },
+    { name: 'Makki Di Roti', desc: 'Traditional cornmeal flatbread with white butter', price: 60, rating: 4.6, reviews: 900, img: './images/makki-ki-roti.avif', veg: true },
+  { name: 'Dal Makhani', desc: 'Slow-cooked black lentils and kidney beans in a rich, creamy tomato gravy topped with butter', price: 280, rating: 4.8, reviews: 2450, img: './images/dal-makhni.webp', veg: true },
+{ name: 'Palak Paneer', desc: 'Fresh cottage cheese cubes simmered in a smooth, vibrant spinach gravy with aromatic spices', price: 260, rating: 4.5, reviews: 1850, img: './images/palak-paneer.webp', veg: true },
+{ name: 'Paneer Butter Masala', desc: 'Soft cottage cheese chunks cooked in a rich, creamy, and mildly sweet onion-tomato gravy', price: 290, rating: 4.7, reviews: 3100, img: './images/paneer-butter-masala.jpg', veg: true }, ],
+  'street-food': [
+    { name: 'Samosa', desc: 'Golden-fried pastry filled with spiced potatoes and peas', price: 45, rating: 4.9, reviews: 5200, img:  './images/samosa.jpg', veg: true },
+    { name: 'Pav Bhaji', desc: 'Mumbai-style vegetable mash with buttered bread rolls', price: 165, rating: 4.8, reviews: 3100, img:  './images/pav-bhaji.avif', veg: true },
+    { name: 'Aloo Tikki', desc: 'Crispy potato patties with tamarind and mint chutney', price: 80, rating: 4.7, reviews: 2400, img:  './images/allo-tikki.jpg', veg: true },
+    { name: 'Pani Puri', desc: 'Crispy hollow puris filled with spiced water and potatoes', price: 70, rating: 4.9, reviews: 4800, img:  './images/pani-puri.jpg', veg: true },
+    { name: 'Dahi Puri', desc: 'Puris topped with yogurt, sev, and sweet-tangy chutneys', price: 95, rating: 4.8, reviews: 1900, img:  './images/dahi-puri.jpg', veg: true },
+    { name: 'Bhel Puri', desc: 'Puffed rice, sev, veggies with tamarind chutney', price: 85, rating: 4.6, reviews: 1500, img:  './images/bhel_puri.avif', veg: true },
+  ],
+  'chinese': [
+   { name: ' Pasta', desc: 'Penne pasta tossed in a fiery tomato sauce with garlic, chili flakes, and fresh basil', price: 240, rating: 4.4, reviews: 1650, img: './images/pasta.jpg', veg: true },
+{ name: 'Veggie Crunch Burger', desc: 'Crispy vegetable patty topped with lettuce, sliced tomatoes, cheese, and house sauce in a toasted bun', price: 180, rating: 4.5, reviews: 2100, img: './images/burger.jpg', veg: true },
+{ name: 'Club Sandwich', desc: 'Double-decker toasted sandwich packed with fresh veggies, grilled cottage cheese, and creamy mayo', price: 150, rating: 4.3, reviews: 1320, img: './images/sandwich.jpg', veg: true },
+ { name: 'Veg Manchurian', desc: 'Crispy vegetable balls in spicy Manchurian gravy', price: 240, rating: 4.7, reviews: 2100, img: './images/veg-manchurian.jpg', veg: true },
+    { name: 'Noodles', desc: 'Stir-fried noodles with veggies in soy-chili sauce', price: 220, rating: 4.5, reviews: 1600, img: './images/noodeles.avif', veg: true },
+    { name: 'Classic French Fries', desc: 'Crispy, golden-fried potato strips lightly tossed in sea salt, served with tangy tomato ketchup', price: 130, rating: 4.6, reviews: 2800, img: './images/french-fries.webp', veg: true },
+    { name: 'Spring Rolls', desc: 'Crispy rolls filled with stir-fried vegetables', price: 160, rating: 4.6, reviews: 1200, img: './images/spring-roll.jpg', veg: true },
+  ],
+  'tandoori': [
+    { name: 'Paneer Tikka', desc: 'Char-grilled paneer in spiced yogurt marinade', price: 320, rating: 4.7, reviews: 1400, img:  './images/paneer-tikka.jpg', veg: true },
+   { name: 'Tandoori Naan', desc: 'Soft leavened bread baked in the tandoor', price: 60, rating: 4.7, reviews: 3200, img:  './images/tandoori-naan.jpg', veg: true },
+    { name: 'Malai Chaap', desc: 'Soya chaap marinated in a rich mixture of cream, yogurt, cashew paste, and mild spices, grilled to perfection', price: 250, rating: 4.6, reviews: 1750, img: './images/malai-champ.jpg', veg: true },
+{ name: 'Mushroom', desc: 'Fresh mushrooms cooked with crunchy bell peppers and onions in a spicy, freshly pounded masala gravy', price: 270, rating: 4.4, reviews: 1120, img: './images/tandoori-mushroom.jpg', veg: true },
+  ],
+  'fast-food': [
+    { name: 'Veg Burger', desc: 'Crispy aloo tikki burger with tangy chutney & veggies', price: 150, rating: 4.5, reviews: 980, img:  './images/burger.jpg', veg: true },
+    { name: 'French Fries', desc: 'Crispy golden fries seasoned with chaat masala', price: 100, rating: 4.4, reviews: 2100, img:  './images/french-fries.webp', veg: true },
+    { name: 'Kathi Roll', desc: 'Paratha roll with spiced filling — the Kolkata classic', price: 180, rating: 4.7, reviews: 1800, img:  './images/kathi-roll.jpg', veg: true },
+    { name: 'Pizza Indian', desc: 'Thin-crust pizza with tikka masala sauce & Indian toppings', price: 280, rating: 4.4, reviews: 760, img:  './images/pizza.jpg', veg: true },
+    ],
+  'desserts': [
+    { name: 'Gulab Jamun', desc: 'Soft milk-solid dumplings in fragrant rose-cardamom syrup', price: 140, rating: 4.9, reviews: 3800, img:  './images/gulabjamun.webp', veg: true },
+    { name: 'Jalebi', desc: 'Crispy spiral fritters soaked in saffron syrup', price: 120, rating: 4.8, reviews: 2900, img:  './images/jalebi.jpg', veg: true },
+    { name: 'Kheer', desc: 'Slow-cooked rice pudding with saffron, nuts, and cardamom', price: 150, rating: 4.7, reviews: 1600, img:  './images/kheer.webp', veg: true },
+    { name: 'Rasmalai', desc: 'Soft cottage cheese patties in saffron-rose cream', price: 180, rating: 4.9, reviews: 2100, img:  './images/Rasmalai.webp', veg: true },
+    { name: 'Gajar Halwa', desc: 'Slow-cooked carrot pudding with ghee, milk, and nuts', price: 160, rating: 4.8, reviews: 1400, img:  './images/Gajar-Ka-Halwa.jpg', veg: true },
+    { name: 'Kulfi', desc: 'Traditional Indian ice cream — mango, pistachio, rose flavours', price: 130, rating: 4.7, reviews: 1900, img:  './images/kulfi.jpg', veg: true },
+  ],
+  'beverages': [
+    { name: 'Kesar Lassi', desc: 'Thick creamy yogurt blended with fresh Alphonso mangoes', price: 120, rating: 4.9, reviews: 4200, img:  './images/kesar-lassi.jpg', veg: true },
+    { name: 'Masala Chai', desc: 'Spiced milk tea with ginger, cardamom, cinnamon', price: 60, rating: 4.8, reviews: 5600, img:  './images/masala-chai.jpg', veg: true },
+    { name: 'Badam Milk', desc: 'Warm or chilled milk with almonds, saffron, cardamom', price: 110, rating: 4.7, reviews: 980, img:  './images/badam-milk.jpg', veg: true },
+    { name: 'Fresh Lime Soda', desc: 'Sweet, salt, or mixed — the perfect Indian refresher', price: 70, rating: 4.5, reviews: 2100, img:  './images/fresh-lime-soda.jpg', veg: true },
+   ],
+  'soup': [
+   { name: 'Veg Clear Soup', desc: 'A light and comforting broth packed with finely diced seasonal vegetables and fresh herbs', price: 120, rating: 4.3, reviews: 850, img: './images/veg-clear-soup.jpg', veg: true },
+{ name: 'Veg Sweet Corn Soup', desc: 'A comforting, creamy soup made with tender crushed sweet corn kernels and a colorful mix of minced veggies', price: 140, rating: 4.5, reviews: 1620, img: './images/veg-sweet-corn-soup.jpg', veg: true },
+{ name: 'Veg Mushroom Soup', desc: 'An earthy and velvety cream soup prepared with fresh sautéed button mushrooms and mild aromatic spices', price: 150, rating: 4.4, reviews: 980, img: './images/veg-mushroom-soup.jpg', veg: true },
+{ name: 'Veg Manchow Soup', desc: 'A spicy and tangy Indo-Chinese soup loaded with minced vegetables, garlic, ginger, and topped with crispy fried noodles', price: 140, rating: 4.7, reviews: 2340, img: './images/veg-manchow-soup.jpg', veg: true }, ],
+  'breakfast': [
+    { name: 'Poha', desc: 'Flattened rice with mustard, turmeric, onions, peas, peanuts', price: 100, rating: 4.7, reviews: 1800, img:  './images/poha.webp', veg: true },
+    { name: 'Upma', desc: 'Semolina cooked with vegetables, mustard, and curry leaves', price: 95, rating: 4.5, reviews: 1200, img:  './images/upma.jpg', veg: true },
+    { name: 'Paratha with Curd', desc: 'Stuffed wheat flatbread with aloo/gobhi, served with yogurt', price: 130, rating: 4.8, reviews: 2600, img:  './images/prantha.jpg', veg: true },
+    { name: 'Bread Pakora', desc: 'Gram-flour battered bread with potato filling, deep fried', price: 110, rating: 4.6, reviews: 980, img:  './images/bread-pakoda.jpg', veg: true },
+   ],
+  'vegetarian': [
+    { name: 'Palak Paneer', desc: 'Paneer cubes in smooth, creamy spinach gravy', price: 300, rating: 4.8, reviews: 2100, img:  './images/palak-paneer.webp', veg: true },
+    { name: 'Baingan Bharta', desc: 'Smoky roasted eggplant mash with onions and tomatoes', price: 240, rating: 4.7, reviews: 1200, img:  './images/baigan-bhartha.jpg', veg: true },
+    { name: 'Rajma Chawal', desc: 'Red kidney bean curry served with steamed basmati rice', price: 200, rating: 4.9, reviews: 3400, img:  './images/rajma-rice.jpg', veg: true },
+    { name: 'Kadai Paneer', desc: 'Paneer with bell peppers in bold kadai masala', price: 320, rating: 4.7, reviews: 1600, img:  './images/kadai-paneer.jpg', veg: true },
+    { name: 'Matar Paneer', desc: 'Green peas and paneer in tangy tomato-based gravy', price: 280, rating: 4.6, reviews: 1400, img:  './images/Matar-Paneer.jpg', veg: true },
+    { name: 'Chana Masala', desc: 'Spiced chickpea curry with chole masala and tamarind', price: 220, rating: 4.8, reviews: 2800, img:  './images/chana-masala.jpg', veg: true },
+  ],
+  'biryani': [
+    { name: 'Veg Biryani', desc: 'Aromatic basmati with seasonal vegetables and whole spices', price: 320, rating: 4.7, reviews: 1600, img:  './images/biryani.avif', veg: true },
+  { name: 'Classic Veg Dum Biryani', desc: 'An aromatic blend of garden-fresh vegetables, basmati rice, and traditional spices slow-cooked on dum', price: 260, rating: 4.5, reviews: 1850, img: './images/classic-veg-biryani.avif', veg: true },
+{ name: 'Hyderabadi Veg Biryani', desc: 'Fragrant basmati rice layered with slow-cooked marinated vegetables, saffron, and fried onions, served with raita', price: 290, rating: 4.7, reviews: 2150, img: './images/hydrabadi-veg-biryani.jpg', veg: true },
+ ],
+};
+
+function createMenuCard(item) {
+  const stars = '★'.repeat(Math.floor(item.rating)) + (item.rating % 1 >= 0.5 ? '½' : '');
+  return `
+    <div class="menu-card reveal">
+      <div class="menu-card-img">
+        <img src="${item.img}" alt="${item.name}" loading="lazy">
+        <div class="menu-veg-badge ${item.veg ? 'veg' : 'non-veg'}">
+          ${item.veg ? '●' : '▲'}
+        </div>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-name">${item.name}</div>
+        <div class="menu-card-desc">${item.desc}</div>
+        <div class="menu-card-bottom">
+          <div>
+           <!-- <div class="menu-price">₹${item.price}</div> -->
+            <div class="menu-stars">${stars} <span style="color:var(--text-light);font-size:0.75rem">(${item.reviews.toLocaleString()})</span></div>
+          </div>
+         <!-- <button class="add-btn" onclick="addToCart('${item.name}', ${item.price})">
+            <i class="fas fa-plus"></i> Add
+          </button> -->
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+let menuInitialized = false;
+function initMenuData() {
+  if (menuInitialized) return;
+  menuInitialized = true;
+  Object.keys(menuData).forEach(cat => {
+    const grid = document.getElementById(cat + '-grid');
+    if (grid) {
+      grid.innerHTML = menuData[cat].map(item => createMenuCard(item)).join('');
+    }
+  });
+  setTimeout(initReveal, 100);
+}
+
+function switchMenuTab(category, btn) {
+
+  // Remove active class
+  document.querySelectorAll('.menu-tab').forEach(t => {
+    t.classList.remove('active');
+  });
+
+  btn.classList.add('active');
+
+  // ALL categories show
+  if(category === 'all'){
+
+    document.querySelectorAll('.menu-items').forEach(item => {
+      item.classList.add('active');
+    });
+
+  } else {
+
+    // Hide all
+    document.querySelectorAll('.menu-items').forEach(item => {
+      item.classList.remove('active');
+    });
+
+    // Show selected
+    const el = document.getElementById('menu-' + category);
+
+    if(el){
+      el.classList.add('active');
+    }
+  }
+
+  setTimeout(initReveal, 50);
+}
+
+function addToCart(name, price) {
+  const toast = document.createElement('div');
+  toast.innerHTML = `<i class="fas fa-check-circle" style="color:#16a34a"></i> <strong>${name}</strong> added! ₹${price}`;
+  toast.style.cssText = `
+    position:fixed;bottom:6rem;right:1.5rem;z-index:9998;
+    background:white;padding:0.8rem 1.2rem;border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    font-size:0.88rem;color:var(--text-dark);
+    display:flex;align-items:center;gap:8px;
+    border-left:4px solid #16a34a;
+    animation:fadeInUp 0.3s ease;
+    max-width:250px;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 3000);
+}
+
+// ============ GALLERY DATA ============
+const galleryImages = [
+   { src: './images/hotel.png', title: 'Butter Chicken', cat: 'food' },
+  { src: './images/about.webp', title: 'Butter Chicken', cat: 'food' },
+  { src: './images/gallery1.webp', title: 'Dum Biryani', cat: 'food' },
+  { src: './images/gallery2.webp', title: 'Gulab Jamun', cat: 'desserts' },
+   { src: './images/about1.webp', title: 'Restaurant Interior', cat: 'interior' },
+  { src: './images/gallery3.webp', title: 'Paneer Tikka', cat: 'food' },
+  { src: './images/gallery4.webp', title: 'Fine Dining', cat: 'interior' },
+  { src: './images/gallery5.webp', title: 'Mango Lassi', cat: 'drinks' },
+  { src: './images/gallery6.webp', title: 'Crispy Dosa', cat: 'food' },
+  { src: './images/bread-pakoda.jpg', title: 'Samosa', cat: 'food' },
+  { src: './images/fresh-lime-soda.jpg', title: 'Restaurant Ambience', cat: 'interior' },
+  { src: './images/Gajar-Ka-Halwa.jpg', title: 'Tandoori Platter', cat: 'food' },
+  { src: './images/french-fries.webp', title: 'Private Dining Event', cat: 'events' },
+  { src: './images/jalebi.jpg', title: 'Fresh Naan', cat: 'food' },
+  { src: './images/idli.jpg', title: 'Dal Makhani', cat: 'food' },
+  { src: './images/kesar-lassi.jpg', title: 'Chef at Work', cat: 'events' },
+  { src: './images/prantha.jpg', title: 'Dessert Platter', cat: 'desserts' },
+];
+
+let galleryRendered = false;
+let currentFilter = 'all';
+
+function renderGallery(filter = 'all') {
+  const grid = document.getElementById('gallery-masonry');
+  if (!grid) return;
+  const filtered = filter === 'all' ? galleryImages : galleryImages.filter(i => i.cat === filter);
+  grid.innerHTML = filtered.map(img => `
+    <div class="gallery-masonry-item" onclick="openLightbox('${img.src.replace('w=600', 'w=1200')}')">
+      <img src="${img.src}" alt="${img.title}" loading="lazy">
+      <div class="gallery-item-info">
+        <div>
+         <!-- <div class="gallery-item-title">${img.title}</div> -->
+         <!-- <div class="gallery-item-cat">${img.cat.charAt(0).toUpperCase() + img.cat.slice(1)}</div> -->
+        </div>
+      </div>
+    </div>
+  `).join('');
+  galleryRendered = true;
+  setTimeout(initReveal, 100);
+}
+
+function filterGallery(filter, btn) {
+  document.querySelectorAll('.gallery-filter').forEach(f => f.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = filter;
+  renderGallery(filter);
+}
+
+// ============ RESERVATION FORM ============
+function submitReservation(e) {
+  e.preventDefault();
+  showToast('🎉 Reservation confirmed! We\'ll contact you shortly.', 'success');
+  e.target.reset();
+}
+function submitContactForm(e) {
+  e.preventDefault();
+  showToast('✅ Reservation request received! We\'ll confirm within 2 hours.', 'success');
+  e.target.reset();
+}
+function showToast(msg, type) {
+  const toast = document.createElement('div');
+  toast.innerHTML = msg;
+  toast.style.cssText = `
+    position:fixed;top:6rem;right:1.5rem;z-index:9998;
+    background:${type === 'success' ? 'linear-gradient(135deg,#16a34a,#15803d)' : '#dc2626'};
+    color:white;padding:1rem 1.5rem;border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);font-size:0.9rem;
+    font-weight:500;animation:fadeInDown 0.4s ease;
+    max-width:300px;line-height:1.5;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 4000);
+}
+
+
+</script>
+</body>
+</html>
