@@ -1736,8 +1736,8 @@ footer {
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .cat-grid { grid-template-columns: repeat(3, 1fr); }
   .about-values{display: flex; flex-direction: column; }
-  .left-info{width: 350px;margin-left: -15px;}
-  .right-form{width: 350px;margin-left: -15px;}
+  .left-info{width: 350px;margin-left: -22px;}
+  .right-form{width: 350px;margin-left: -22px;}
   .cat-card{padding: 0.5rem 1rem;}
   .gallery-item-overlay p {display: none;}
 }
