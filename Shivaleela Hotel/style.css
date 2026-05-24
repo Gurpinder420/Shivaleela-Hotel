@@ -1317,6 +1317,7 @@ footer {
   max-width: 1280px;
   margin: 0 auto;
   display: none;
+ 
 }
 .menu-items.active { display: block; }
 .menu-category-title {
@@ -1741,6 +1742,7 @@ footer {
   .right-form{width: 350px;margin-left: -22px;}
   .cat-card{padding: 0.5rem 1rem;}
   .gallery-item-overlay p {display: none;}
+  #biryani-grid{width: 340px;margin-left: -8.5px;}
 }
 
 /* ============ EXTRA POLISH ============ */
