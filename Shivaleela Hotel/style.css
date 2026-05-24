@@ -1743,6 +1743,9 @@ footer {
   .cat-card{padding: 0.5rem 1rem;}
   .gallery-item-overlay p {display: none;}
   #biryani-grid{width: 340px;margin-left: -8.5px;}
+  .chef-dish-preview{display: flex;flex-direction: column;}
+   .chef-dish-mini-name {font-size: 1.2rem;background-color: beige;}
+  .chef-dish-mini img{height: 150px;}
 }
 
 /* ============ EXTRA POLISH ============ */
